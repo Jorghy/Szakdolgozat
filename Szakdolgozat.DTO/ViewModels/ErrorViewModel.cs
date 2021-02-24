@@ -1,11 +1,8 @@
-using System;
-
-namespace Szakdolgozat.Models
+﻿namespace Szakdolgozat.DTO.ViewModels
 {
     public class ErrorViewModel
     {
         public string RequestId { get; set; }
-
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
 }
