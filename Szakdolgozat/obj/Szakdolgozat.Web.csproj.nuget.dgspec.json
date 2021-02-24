@@ -1,0 +1,237 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Project\\Szakdolgozat\\Szakdolgozat\\Szakdolgozat.Web.csproj": {}
+  },
+  "projects": {
+    "D:\\Project\\Szakdolgozat\\Szakdolgozat.BL\\Szakdolgozat.BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\Szakdolgozat\\Szakdolgozat.BL\\Szakdolgozat.BL.csproj",
+        "projectName": "Szakdolgozat.BL",
+        "projectPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat.BL\\Szakdolgozat.BL.csproj",
+        "packagesPath": "C:\\Users\\torpe\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat.BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\torpe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Project\\Szakdolgozat\\Szakdolgozat.DAL\\Szakdolgozat.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\Szakdolgozat\\Szakdolgozat.DAL\\Szakdolgozat.DAL.csproj",
+        "projectName": "Szakdolgozat.DAL",
+        "projectPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat.DAL\\Szakdolgozat.DAL.csproj",
+        "packagesPath": "C:\\Users\\torpe\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\torpe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Project\\Szakdolgozat\\Szakdolgozat.DTO\\Szakdolgozat.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\Szakdolgozat\\Szakdolgozat.DTO\\Szakdolgozat.DTO.csproj",
+        "projectName": "Szakdolgozat.DTO",
+        "projectPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat.DTO\\Szakdolgozat.DTO.csproj",
+        "packagesPath": "C:\\Users\\torpe\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\torpe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Project\\Szakdolgozat\\Szakdolgozat\\Szakdolgozat.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Project\\Szakdolgozat\\Szakdolgozat\\Szakdolgozat.Web.csproj",
+        "projectName": "Szakdolgozat.Web",
+        "projectPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat\\Szakdolgozat.Web.csproj",
+        "packagesPath": "C:\\Users\\torpe\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\torpe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Project\\Szakdolgozat\\Szakdolgozat.BL\\Szakdolgozat.BL.csproj": {
+                "projectPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat.BL\\Szakdolgozat.BL.csproj"
+              },
+              "D:\\Project\\Szakdolgozat\\Szakdolgozat.DAL\\Szakdolgozat.DAL.csproj": {
+                "projectPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat.DAL\\Szakdolgozat.DAL.csproj"
+              },
+              "D:\\Project\\Szakdolgozat\\Szakdolgozat.DTO\\Szakdolgozat.DTO.csproj": {
+                "projectPath": "D:\\Project\\Szakdolgozat\\Szakdolgozat.DTO\\Szakdolgozat.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
