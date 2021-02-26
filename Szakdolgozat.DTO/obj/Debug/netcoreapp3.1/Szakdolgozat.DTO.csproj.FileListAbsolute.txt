@@ -1,0 +1,12 @@
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\bin\Debug\netcoreapp3.1\Szakdolgozat.DTO.deps.json
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\bin\Debug\netcoreapp3.1\Szakdolgozat.DTO.runtimeconfig.json
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\bin\Debug\netcoreapp3.1\Szakdolgozat.DTO.runtimeconfig.dev.json
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\bin\Debug\netcoreapp3.1\Szakdolgozat.DTO.dll
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\bin\Debug\netcoreapp3.1\Szakdolgozat.DTO.pdb
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\obj\Debug\netcoreapp3.1\Szakdolgozat.DTO.csprojAssemblyReference.cache
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\obj\Debug\netcoreapp3.1\Szakdolgozat.DTO.AssemblyInfoInputs.cache
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\obj\Debug\netcoreapp3.1\Szakdolgozat.DTO.AssemblyInfo.cs
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\obj\Debug\netcoreapp3.1\Szakdolgozat.DTO.csproj.CoreCompileInputs.cache
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\obj\Debug\netcoreapp3.1\Szakdolgozat.DTO.dll
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\obj\Debug\netcoreapp3.1\Szakdolgozat.DTO.pdb
+D:\Project\Szakdolgozat\Szakdolgozat.DTO\obj\Debug\netcoreapp3.1\Szakdolgozat.DTO.genruntimeconfig.cache
