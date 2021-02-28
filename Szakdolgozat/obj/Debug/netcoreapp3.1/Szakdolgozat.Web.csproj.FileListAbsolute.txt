@@ -92,3 +92,6 @@ D:\Project\Szakdolgozat\Szakdolgozat\bin\Debug\netcoreapp3.1\Szakdolgozat.DTO.pd
 D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Szakdolgozat.Web.Views.pdb
 D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Szakdolgozat.Web.csproj.CopyComplete
 D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Szakdolgozat.Web.genruntimeconfig.cache
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Author\Create.cshtml.g.cs
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Author\Delete.cshtml.g.cs
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Author\Details.cshtml.g.cs

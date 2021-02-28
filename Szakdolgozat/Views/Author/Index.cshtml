@@ -1,4 +1,23 @@
 ﻿@model IEnumerable<Szakdolgozat.DTO.ViewModels.AuthorVm>
+@{
+    ViewData["Title"] = "Szerző";
+}
+
+@if(ViewData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Bezár">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @ViewData["Message"]
+    </div>
+}
+
+<h1>Szerzők</h1>
+
+<p>
+    @Html.ActionLink("Hozzáadás", "Create", new {}, new { @class = "btn btn-success" })
+</p>
 
 <table class="table">
     <tr>
@@ -62,7 +81,9 @@
                 @Html.DisplayFor(modelItem => item.Zip)
             </td>
             <td>
-
+                @Html.ActionLink("Részletek", "Details", new { id = item.AuthorId }, new { @class = "btn btn-info" }) |
+                @Html.ActionLink("Szerkesztés", "Edit", new { id = item.AuthorId }, new { @class = "btn btn-secondary" }) |
+                @Html.ActionLink("Törlés", "Delete", new { id = item.AuthorId }, new { @class = "btn btn-danger" })
             </td>
         </tr>
     }
