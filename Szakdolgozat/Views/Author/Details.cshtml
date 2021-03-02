@@ -64,6 +64,17 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Zip)
         </dd>
+        <dt class="col-sm-2">
+            Könyvek:
+        </dt>
+        <dd class="col-sm-10">
+            <ul>
+                @foreach(var item in Model.BookAuthors.Select(x => x.Book.Title))
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        </dd>
     </dl>
 </div>
 <div>

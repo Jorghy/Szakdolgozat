@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Szakdolgozat.DTO.ViewModels.BookVm>
+@{
+    ViewData["Title"] = "Könyv";
+}
+
+@if (ViewData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Bezár">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        @ViewData["Message"]
+    </div>
+}
+
+<h1>Könyvek</h1>
+
+<p>
+    @Html.ActionLink("Hozzáadás", "Create", new { }, new { @class = "btn btn-success" })
+</p>
+
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.BookId)</th>
+        <th>@Html.DisplayNameFor(model => model.Title)</th>
+        <th>@Html.DisplayNameFor(model => model.Type)</th>
+        <th>@Html.DisplayNameFor(model => model.Publisher.PublisherName)</th>
+        <th>@Html.DisplayNameFor(model => model.Price)</th>
+        <th>@Html.DisplayNameFor(model => model.Royality)</th>
+        <th>@Html.DisplayNameFor(model => model.YtdSales)</th>
+        <th>@Html.DisplayNameFor(model => model.Notes)</th>
+        <th>@Html.DisplayNameFor(model => model.PublishedDate)</th>
+        <th></th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.BookId)</td>
+            <td>@Html.DisplayFor(model => item.Title)</td>
+            <td>@Html.DisplayFor(model => item.Type)</td>
+            <td>@Html.DisplayFor(model => item.Publisher.PublisherName)</td>
+            <td>@Html.DisplayFor(model => item.Price)</td>
+            <td>@Html.DisplayFor(model => item.Royality)</td>
+            <td>@Html.DisplayFor(model => item.YtdSales)</td>
+            <td>@Html.DisplayFor(model => item.Notes)</td>
+            <td>@Html.DisplayFor(model => item.PublishedDate)</td>
+            <td>
+                @Html.ActionLink("Részletek", "Details", new { id = item.BookId }, new { @class = "btn btn-info" }) |
+                @Html.ActionLink("Szerkesztés", "Edit", new { id = item.BookId }, new { @class = "btn btn-secondary" }) |
+                @Html.ActionLink("Törlés", "Delete", new { id = item.BookId }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>

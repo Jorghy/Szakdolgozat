@@ -95,3 +95,11 @@ D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Szakdolgozat.Web.ge
 D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Author\Create.cshtml.g.cs
 D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Author\Delete.cshtml.g.cs
 D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Author\Details.cshtml.g.cs
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Publisher\Create.cshtml.g.cs
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Publisher\Delete.cshtml.g.cs
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Publisher\Details.cshtml.g.cs
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Publisher\Index.cshtml.g.cs
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Book\Create.cshtml.g.cs
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Book\Delete.cshtml.g.cs
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Book\Details.cshtml.g.cs
+D:\Project\Szakdolgozat\Szakdolgozat\obj\Debug\netcoreapp3.1\Razor\Views\Book\Index.cshtml.g.cs
