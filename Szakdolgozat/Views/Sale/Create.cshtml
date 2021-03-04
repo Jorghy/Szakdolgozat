@@ -1,0 +1,107 @@
+﻿@model Szakdolgozat.DTO.ViewModels.SaleVm
+
+<div class="row justify-content-center">
+    <div class="col-8">
+        @if (Model == null)
+        {
+            ViewData["Title"] = "Hozzáadás";
+            <h1>Hozzáadás</h1>
+
+            <h4>Eladás</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Store.StoreName" class="control-label"></label>
+                            <select class="form-control" asp-for="StoreId" asp-items="ViewBag.Store"></select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Book.Title" class="control-label"></label>
+                            <select class="form-control" asp-for="BookId" asp-items="ViewBag.Book"></select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="OrderNum" class="control-label"></label>
+                            <input asp-for="OrderNum" class="form-control" />
+                            <span asp-validation-for="OrderNum" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="OrderDate" class="control-label"></label>
+                            <input asp-for="OrderDate" class="form-control" />
+                            <span asp-validation-for="OrderDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Quantity" class="control-label"></label>
+                            <input asp-for="Quantity" class="form-control" />
+                            <span asp-validation-for="Quantity" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PayTerms" class="control-label"></label>
+                            <input asp-for="PayTerms" class="form-control" />
+                            <span asp-validation-for="PayTerms" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Mentés" class="btn btn-success" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div>
+                <a class="btn btn-info" asp-action="Index">Vissza</a>
+            </div>
+        }
+        else
+        {
+            ViewData["Title"] = "Szerkesztés";
+            <h1>Szerkesztés</h1>
+
+            <h4>Üzlet</h4>
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="StoreId" />
+                        <div class="form-group">
+                            <label asp-for="Store.StoreName" class="control-label"></label>
+                            <select class="form-control" asp-for="StoreId" asp-items="ViewBag.Store"></select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Book.Title" class="control-label"></label>
+                            <select class="form-control" asp-for="BookId" asp-items="ViewBag.Book"></select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="OrderNum" class="control-label"></label>
+                            <input asp-for="OrderNum" class="form-control" />
+                            <span asp-validation-for="OrderNum" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="OrderDate" class="control-label"></label>
+                            <input asp-for="OrderDate" class="form-control" />
+                            <span asp-validation-for="OrderDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Quantity" class="control-label"></label>
+                            <input asp-for="Quantity" class="form-control" />
+                            <span asp-validation-for="Quantity" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PayTerms" class="control-label"></label>
+                            <input asp-for="PayTerms" class="form-control" />
+                            <span asp-validation-for="PayTerms" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Mentés" class="btn btn-success" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div>
+                <a class="btn btn-info" asp-action="Index">Vissza</a>
+            </div>
+        }
+    </div>
+</div>

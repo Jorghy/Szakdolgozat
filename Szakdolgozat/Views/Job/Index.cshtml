@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Szakdolgozat.DTO.ViewModels.JobVm>
+@{
+    ViewData["Title"] = "Beosztás";
+}
+
+<div class="container">
+
+    @if (ViewData["Message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Bezár">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            @ViewData["Message"]
+        </div>
+    }
+
+    <h1>Beosztások</h1>
+
+    <p>
+        @Html.ActionLink("Hozzáadás", "Create", new { }, new { @class = "btn btn-success" })
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.JobId)</th>
+            <th>@Html.DisplayNameFor(model => model.JobDesc)</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.JobId)</td>
+                <td>@Html.DisplayFor(modelItem => item.JobDesc)</td>
+                <td>
+                    @Html.ActionLink("Részletek", "Details", new { id = item.JobId }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Szerkesztés", "Edit", new { id = item.JobId }, new { @class = "btn btn-secondary" }) |
+                    @Html.ActionLink("Törlés", "Delete", new { id = item.JobId }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

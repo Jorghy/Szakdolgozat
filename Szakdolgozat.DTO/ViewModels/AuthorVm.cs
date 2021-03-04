@@ -8,17 +8,17 @@ namespace Szakdolgozat.DTO.ViewModels
         [Display(Name = "ID")]
         public int AuthorId { get; set; }
 
-        [Display(Name = "Vezetéknév")]
+        [Display(Name = "Vezetéknév *")]
         [Required(ErrorMessage = "A(z) {0} mezőt kötelező kitölteni!")]
         [MaxLength(40, ErrorMessage = "A(z) {0} mező {1}-nél hosszabb nem lehet!")]
         public string LastName { get; set; }
 
-        [Display(Name = "Keresztnév")]
+        [Display(Name = "Keresztnév *")]
         [Required(ErrorMessage = "A(z) {0} mezőt kötelező kitölteni!")]
         [MaxLength(20, ErrorMessage = "A(z) {0} mező {1}-nél hosszabb nem lehet!")]
         public string FirstName { get; set; }
 
-        [Display(Name = "Telefon szám")]
+        [Display(Name = "Telefon szám *")]
         [Required(ErrorMessage = "A(z) {0} mezőt kötelező kitölteni!")]
         [MaxLength(12, ErrorMessage = "A(z) {0} mező {1}-nél hosszabb nem lehet!")]
         public string Phone { get; set; }

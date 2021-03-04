@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Szakdolgozat.DTO.ViewModels.StoreVm>
+@{
+    ViewData["Title"] = "Üzlet";
+}
+
+<div class="container">
+
+    @if (ViewData["Message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Bezár">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            @ViewData["Message"]
+        </div>
+    }
+
+    <h1>Üzletek</h1>
+
+    <p>
+        @Html.ActionLink("Hozzáadás", "Create", new { }, new { @class = "btn btn-success" })
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.StoreId)</th>
+            <th>@Html.DisplayNameFor(model => model.StoreName)</th>
+            <th>@Html.DisplayNameFor(model => model.StoreAddress)</th>
+            <th>@Html.DisplayNameFor(model => model.City)</th>
+            <th>@Html.DisplayNameFor(model => model.State)</th>
+            <th>@Html.DisplayNameFor(model => model.Zip)</th>
+            <th style="width: 320px"></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.StoreId)</td>
+                <td>@Html.DisplayFor(modelItem => item.StoreName)</td>
+                <td>@Html.DisplayFor(modelItem => item.StoreAddress)</td>
+                <td>@Html.DisplayFor(modelItem => item.City)</td>
+                <td>@Html.DisplayFor(modelItem => item.State)</td>
+                <td>@Html.DisplayFor(modelItem => item.Zip)</td>
+                <td>
+                    @Html.ActionLink("Részletek", "Details", new { id = item.StoreId }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Szerkesztés", "Edit", new { id = item.StoreId }, new { @class = "btn btn-secondary" }) |
+                    @Html.ActionLink("Törlés", "Delete", new { id = item.StoreId }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

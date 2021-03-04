@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Szakdolgozat.Web.Controllers
 {
@@ -30,8 +31,27 @@ namespace Szakdolgozat.Web.Controllers
         }
 
         #region Add
-        public IActionResult Create(int? id)
+        public IActionResult Create(int? id, [FromQuery] string bookid)
         {
+            IEnumerable<SelectListItem> items = new List<SelectListItem>();
+            var publishers = _unitOfWork.Publishers.GetAll();
+            var publishersVm = _mapper.Map<IEnumerable<PublisherVm>>(publishers);
+            if (bookid != null)
+                items = publishersVm.Where(x => x.PublisherId == Convert.ToInt32(bookid))
+                    .Select(p => new SelectListItem
+                    {
+                        Value = p.PublisherId.ToString(),
+                        Text = p.PublisherName
+                    });
+            else
+                items = publishersVm.Select(p => new SelectListItem
+                {
+                    Value = p.PublisherId.ToString(),
+                    Text = p.PublisherName
+                });
+
+            ViewBag.Pub = items;
+
             if (id == null)
                 return View();
 
@@ -79,7 +99,8 @@ namespace Szakdolgozat.Web.Controllers
                 TempData["Message"] = "A változtatásokat sikeresen elmentettük!";
                 return RedirectToAction(nameof(Index));
             }
-            return View(form);
+            TempData["Message"] = "Mentés sikertelen!";
+            return RedirectToAction(nameof(Create), form.BookId);
         }
         #endregion
 

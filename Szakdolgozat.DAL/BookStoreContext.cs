@@ -5,7 +5,7 @@ namespace Szakdolgozat.DAL
 {
     public class BookStoreContext : DbContext
     {
-        public BookStoreContext() : base("Data Source=localhost;Initial Catalog=BookStoreDB;Integrated Security=True;")
+        public BookStoreContext() : base("Server=tcp:bookstores.database.windows.net,1433;Initial Catalog=BookStoreDB;Persist Security Info=False;User ID=ruzsinp;Password=Roplabda18;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
         {
             Database.SetInitializer(new BookStoreInitializer());
         }

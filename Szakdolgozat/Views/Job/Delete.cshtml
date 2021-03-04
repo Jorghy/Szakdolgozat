@@ -1,0 +1,27 @@
+﻿@model Szakdolgozat.DTO.ViewModels.JobVm
+@{
+    ViewData["Title"] = "Törlés";
+}
+
+<div class="container">
+    <h1>Törlés</h1>
+
+    <h3>Tényleg törölni szeretnéd?</h3>
+    <div>
+        <h4>Beosztás</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">@Html.DisplayNameFor(model => model.JobId)</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.JobId)</dd>
+
+            <dt class="col-sm-2">@Html.DisplayNameFor(model => model.JobDesc)</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.JobDesc)</dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="JobId" />
+            <input type="submit" value="Törlés" class="btn btn-danger" /><br /><br />
+            <a class="btn btn-info" asp-action="Index">Vissza</a>
+        </form>
+    </div>
+</div>

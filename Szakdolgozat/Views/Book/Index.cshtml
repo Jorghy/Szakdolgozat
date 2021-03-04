@@ -19,29 +19,29 @@
     @Html.ActionLink("Hozzáadás", "Create", new { }, new { @class = "btn btn-success" })
 </p>
 
-<table>
+<table class="table">
     <tr>
-        <th>@Html.DisplayNameFor(model => model.BookId)</th>
-        <th>@Html.DisplayNameFor(model => model.Title)</th>
+        @*<th>@Html.DisplayNameFor(model => model.BookId)</th>*@
+        <th style="width: 300px; text-align: center;">@Html.DisplayNameFor(model => model.Title)</th>
         <th>@Html.DisplayNameFor(model => model.Type)</th>
         <th>@Html.DisplayNameFor(model => model.Publisher.PublisherName)</th>
         <th>@Html.DisplayNameFor(model => model.Price)</th>
         <th>@Html.DisplayNameFor(model => model.Royality)</th>
-        <th>@Html.DisplayNameFor(model => model.YtdSales)</th>
-        <th>@Html.DisplayNameFor(model => model.Notes)</th>
+        <th style="width: 140px; text-align: center;">@Html.DisplayNameFor(model => model.YtdSales)</th>
+        <th style="width: 500px; text-align: center;">@Html.DisplayNameFor(model => model.Notes)</th>
         <th>@Html.DisplayNameFor(model => model.PublishedDate)</th>
-        <th></th>
+        <th style="width: 300px"></th>
     </tr>
     @foreach(var item in Model)
     {
         <tr>
-            <td>@Html.DisplayFor(model => item.BookId)</td>
+            @*<td>@Html.DisplayFor(model => item.BookId)</td>*@
             <td>@Html.DisplayFor(model => item.Title)</td>
             <td>@Html.DisplayFor(model => item.Type)</td>
             <td>@Html.DisplayFor(model => item.Publisher.PublisherName)</td>
             <td>@Html.DisplayFor(model => item.Price)</td>
-            <td>@Html.DisplayFor(model => item.Royality)</td>
-            <td>@Html.DisplayFor(model => item.YtdSales)</td>
+            <td style="text-align: center">@Html.DisplayFor(model => item.Royality)</td>
+            <td style="text-align: center">@Html.DisplayFor(model => item.YtdSales)</td>
             <td>@Html.DisplayFor(model => item.Notes)</td>
             <td>@Html.DisplayFor(model => item.PublishedDate)</td>
             <td>

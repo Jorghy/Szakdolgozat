@@ -1,0 +1,17 @@
+D:\Project\Szakdolgozat\Szakdolgozat.BL\bin\Release\netcoreapp3.1\Szakdolgozat.BL.deps.json
+D:\Project\Szakdolgozat\Szakdolgozat.BL\bin\Release\netcoreapp3.1\Szakdolgozat.BL.runtimeconfig.json
+D:\Project\Szakdolgozat\Szakdolgozat.BL\bin\Release\netcoreapp3.1\Szakdolgozat.BL.runtimeconfig.dev.json
+D:\Project\Szakdolgozat\Szakdolgozat.BL\bin\Release\netcoreapp3.1\Szakdolgozat.BL.dll
+D:\Project\Szakdolgozat\Szakdolgozat.BL\bin\Release\netcoreapp3.1\Szakdolgozat.BL.pdb
+D:\Project\Szakdolgozat\Szakdolgozat.BL\bin\Release\netcoreapp3.1\Szakdolgozat.DAL.dll
+D:\Project\Szakdolgozat\Szakdolgozat.BL\bin\Release\netcoreapp3.1\Szakdolgozat.DTO.dll
+D:\Project\Szakdolgozat\Szakdolgozat.BL\bin\Release\netcoreapp3.1\Szakdolgozat.DAL.pdb
+D:\Project\Szakdolgozat\Szakdolgozat.BL\bin\Release\netcoreapp3.1\Szakdolgozat.DTO.pdb
+D:\Project\Szakdolgozat\Szakdolgozat.BL\obj\Release\netcoreapp3.1\Szakdolgozat.BL.csprojAssemblyReference.cache
+D:\Project\Szakdolgozat\Szakdolgozat.BL\obj\Release\netcoreapp3.1\Szakdolgozat.BL.AssemblyInfoInputs.cache
+D:\Project\Szakdolgozat\Szakdolgozat.BL\obj\Release\netcoreapp3.1\Szakdolgozat.BL.AssemblyInfo.cs
+D:\Project\Szakdolgozat\Szakdolgozat.BL\obj\Release\netcoreapp3.1\Szakdolgozat.BL.csproj.CoreCompileInputs.cache
+D:\Project\Szakdolgozat\Szakdolgozat.BL\obj\Release\netcoreapp3.1\Szakdolgozat.BL.csproj.CopyComplete
+D:\Project\Szakdolgozat\Szakdolgozat.BL\obj\Release\netcoreapp3.1\Szakdolgozat.BL.dll
+D:\Project\Szakdolgozat\Szakdolgozat.BL\obj\Release\netcoreapp3.1\Szakdolgozat.BL.pdb
+D:\Project\Szakdolgozat\Szakdolgozat.BL\obj\Release\netcoreapp3.1\Szakdolgozat.BL.genruntimeconfig.cache

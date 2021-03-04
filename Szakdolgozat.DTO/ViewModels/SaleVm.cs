@@ -21,6 +21,7 @@ namespace Szakdolgozat.DTO.ViewModels
 
         [Display(Name = "Rendelés dátuma")]
         [Required(ErrorMessage = "A(z) {0} mezőt kötelező kitölteni!")]
+        [DisplayFormat(DataFormatString = "{0:yyyy.MM.dd}", ApplyFormatInEditMode = true)]
         public DateTime OrderDate { get; set; }
 
         [Display(Name = "Mennyiség")]

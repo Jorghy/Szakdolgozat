@@ -1,0 +1,15 @@
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\bin\Release\netcoreapp3.1\Szakdolgozat.DAL.deps.json
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\bin\Release\netcoreapp3.1\Szakdolgozat.DAL.runtimeconfig.json
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\bin\Release\netcoreapp3.1\Szakdolgozat.DAL.runtimeconfig.dev.json
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\bin\Release\netcoreapp3.1\Szakdolgozat.DAL.dll
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\bin\Release\netcoreapp3.1\Szakdolgozat.DAL.pdb
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\bin\Release\netcoreapp3.1\Szakdolgozat.DTO.dll
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\bin\Release\netcoreapp3.1\Szakdolgozat.DTO.pdb
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\obj\Release\netcoreapp3.1\Szakdolgozat.DAL.csprojAssemblyReference.cache
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\obj\Release\netcoreapp3.1\Szakdolgozat.DAL.AssemblyInfoInputs.cache
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\obj\Release\netcoreapp3.1\Szakdolgozat.DAL.AssemblyInfo.cs
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\obj\Release\netcoreapp3.1\Szakdolgozat.DAL.csproj.CoreCompileInputs.cache
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\obj\Release\netcoreapp3.1\Szakdolgozat.DAL.csproj.CopyComplete
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\obj\Release\netcoreapp3.1\Szakdolgozat.DAL.dll
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\obj\Release\netcoreapp3.1\Szakdolgozat.DAL.pdb
+D:\Project\Szakdolgozat\Szakdolgozat.DAL\obj\Release\netcoreapp3.1\Szakdolgozat.DAL.genruntimeconfig.cache
