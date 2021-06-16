@@ -1,6 +1,8 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +27,19 @@ namespace Szakdolgozat
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddScoped<BookStoreContext>();
+                        
+            services.AddDbContext<BookStoreContext>(
+                options => options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("BookStoreConnection"),
+                b => b.MigrationsAssembly("Szakdolgozat.Web")));
+
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 5;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredUniqueChars = 0;
+                options.Password.RequireDigit = false;
+            }).AddEntityFrameworkStores<BookStoreContext>();
+
             var mp = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
@@ -38,10 +52,8 @@ namespace Szakdolgozat
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<IJobRepository, JobRepository>();
             services.AddScoped<IPublisherRepository, PublisherRepository>();
-            services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<ISaleRepository, SaleRepository>();
             services.AddScoped<IStoreRepository, StoreRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +74,7 @@ namespace Szakdolgozat
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

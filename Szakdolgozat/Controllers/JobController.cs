@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Szakdolgozat.BL.UnitOfWork;
@@ -7,6 +8,7 @@ using Szakdolgozat.DTO.ViewModels;
 
 namespace Szakdolgozat.Web.Controllers
 {
+    [Authorize]
     public class JobController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -47,7 +49,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                JobCo formCo = _mapper.Map<JobCo>(form);
+                Job formCo = _mapper.Map<Job>(form);
                 _unitOfWork.Jobs.Add(formCo);
                 _unitOfWork.Complate();
                 TempData["Message"] = "Sikeres hozzáadás!";
@@ -69,7 +71,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                JobCo jobCo = _mapper.Map<JobCo>(form);
+                Job jobCo = _mapper.Map<Job>(form);
                 _unitOfWork.Jobs.Update(jobCo);
                 _unitOfWork.Complate();
 

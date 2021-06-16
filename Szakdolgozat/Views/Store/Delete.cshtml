@@ -11,8 +11,8 @@
         <h4>Üzlet</h4>
         <hr />
         <dl class="row">
-            <dt class="col-sm-2">@Html.DisplayNameFor(model => model.StoreId)</dt>
-            <dd class="col-sm-10">@Html.DisplayFor(model => model.StoreId)</dd>
+            <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Id)</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.Id)</dd>
 
             <dt class="col-sm-2">@Html.DisplayNameFor(model => model.StoreName)</dt>
             <dd class="col-sm-10">@Html.DisplayFor(model => model.StoreName)</dd>
@@ -31,7 +31,7 @@
         </dl>
 
         <form asp-action="Delete">
-            <input type="hidden" asp-for="StoreId" />
+            <input type="hidden" asp-for="Id" />
             <input type="submit" value="Törlés" class="btn btn-danger" /><br /><br />
             <a class="btn btn-info" asp-action="Index">Vissza</a>
         </form>

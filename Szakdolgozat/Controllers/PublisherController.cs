@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Szakdolgozat.BL.UnitOfWork;
@@ -7,6 +8,7 @@ using Szakdolgozat.DTO.ViewModels;
 
 namespace Szakdolgozat.Web.Controllers
 {
+    [Authorize]
     public class PublisherController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -47,7 +49,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                PublisherCo formCo = _mapper.Map<PublisherCo>(form);
+                Publisher formCo = _mapper.Map<Publisher>(form);
                 _unitOfWork.Publishers.Add(formCo);
                 _unitOfWork.Complate();
                 TempData["Message"] = "Sikeres hozzáadás!";
@@ -69,7 +71,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                PublisherCo pubCo = _mapper.Map<PublisherCo>(form);
+                Publisher pubCo = _mapper.Map<Publisher>(form);
                 _unitOfWork.Publishers.Update(pubCo);
                 _unitOfWork.Complate();
 

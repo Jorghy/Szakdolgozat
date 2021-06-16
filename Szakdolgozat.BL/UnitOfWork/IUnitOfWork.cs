@@ -10,10 +10,8 @@ namespace Szakdolgozat.BL.UnitOfWork
         IBookRepository Books { get; }
         IJobRepository Jobs { get; }
         IPublisherRepository Publishers { get; }
-        IRoleRepository Roles { get; }
         ISaleRepository Sales { get; }
         IStoreRepository Stores { get; }
-        IUserRepository Users { get; }
 
         int Complate();
     }

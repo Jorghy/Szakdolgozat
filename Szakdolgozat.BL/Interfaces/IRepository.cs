@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Szakdolgozat.DTO.Models;
 
 namespace Szakdolgozat.BL.Interfaces
@@ -14,13 +12,11 @@ namespace Szakdolgozat.BL.Interfaces
         void Delete(T entity);
     }
 
-    public interface IAuthorRepository : IRepository<AuthorCo> { }
-    public interface IBookAuthorRepository : IRepository<BookAuthorCo> { }
-    public interface IBookRepository : IRepository<BookCo> { }
-    public interface IJobRepository : IRepository<JobCo> { }
-    public interface IPublisherRepository : IRepository<PublisherCo> { }
-    public interface IRoleRepository : IRepository<RoleCo> { }
-    public interface ISaleRepository : IRepository<SaleCo> { }
-    public interface IStoreRepository : IRepository<StoreCo> { }
-    public interface IUserRepository : IRepository<UserCo> { }
+    public interface IAuthorRepository : IRepository<Author> { }
+    public interface IBookAuthorRepository : IRepository<BookAuthor> { }
+    public interface IBookRepository : IRepository<Book> { }
+    public interface IJobRepository : IRepository<Job> { }
+    public interface IPublisherRepository : IRepository<Publisher> { }
+    public interface ISaleRepository : IRepository<Sale> { }
+    public interface IStoreRepository : IRepository<Store> { }
 }

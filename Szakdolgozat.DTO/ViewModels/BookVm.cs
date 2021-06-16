@@ -8,7 +8,7 @@ namespace Szakdolgozat.DTO.ViewModels
     public class BookVm
     {
         [Display(Name = "ID")]
-        public int BookId { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Könyv címe")]
         [Required(ErrorMessage = "A(z) {0} mezőt kötelező kitölteni!")]
@@ -39,6 +39,7 @@ namespace Szakdolgozat.DTO.ViewModels
 
         [Display(Name = "Kiadás dátuma")]
         [DisplayFormat(DataFormatString = "{0:yyyy.MM.dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         [Required(ErrorMessage = "A(z) {0} mezőt kötelező kitölteni!")]
         public DateTime PublishedDate { get; set; }
 

@@ -8,7 +8,7 @@ namespace Szakdolgozat.DTO.ViewModels
     public class SaleVm
     {
         [Display(Name = "ID")]
-        public int SaleId { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Üzlet")]
         [Required(ErrorMessage = "A(z) {0} mezőt kötelező kitölteni!")]

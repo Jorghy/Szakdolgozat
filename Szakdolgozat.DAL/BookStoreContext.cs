@@ -1,25 +1,28 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Szakdolgozat.DTO.Models;
 
 namespace Szakdolgozat.DAL
 {
-    public class BookStoreContext : DbContext
+    public partial class BookStoreContext : IdentityDbContext
     {
-        public BookStoreContext() : base("Server=tcp:bookstores.database.windows.net,1433;Initial Catalog=BookStoreDB;Persist Security Info=False;User ID=ruzsinp;Password=Roplabda18;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
+        public BookStoreContext(DbContextOptions<BookStoreContext> options)
+            : base(options)
         {
-            Database.SetInitializer(new BookStoreInitializer());
+            
         }
 
-        public DbSet<AuthorCo> Authors { get; set; }
-        public DbSet<BookCo> Books { get; set; }
-        public DbSet<BookAuthorCo> BookAuthors { get; set; }
-        public DbSet<JobCo> Jobs { get; set; }
-        public DbSet<PublisherCo> Publishers { get; set; }
-        public DbSet<RefreshToken> RefreshTokens { get; set; }
-        public DbSet<RoleCo> Roles { get; set; }
-        public DbSet<SaleCo> Sales { get; set; }
-        public DbSet<StoreCo> Stores { get; set; }
-        public DbSet<UserCo> Users { get; set; }
+        public virtual DbSet<Author> Authors { get; set; }
+        public virtual DbSet<Book> Books { get; set; }
+        public virtual DbSet<BookAuthor> BookAuthors { get; set; }
+        public virtual DbSet<Job> Jobs { get; set; }
+        public virtual DbSet<Publisher> Publishers { get; set; }
+        public virtual DbSet<Sale> Sales { get; set; }
+        public virtual DbSet<Store> Stores { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

@@ -6,11 +6,12 @@ using Szakdolgozat.DTO.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Szakdolgozat.Web.Controllers
 {
+    [Authorize]
     public class BookController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -37,16 +38,16 @@ namespace Szakdolgozat.Web.Controllers
             var publishers = _unitOfWork.Publishers.GetAll();
             var publishersVm = _mapper.Map<IEnumerable<PublisherVm>>(publishers);
             if (bookid != null)
-                items = publishersVm.Where(x => x.PublisherId == Convert.ToInt32(bookid))
+                items = publishersVm.Where(x => x.Id == Convert.ToInt32(bookid))
                     .Select(p => new SelectListItem
                     {
-                        Value = p.PublisherId.ToString(),
+                        Value = p.Id.ToString(),
                         Text = p.PublisherName
                     });
             else
                 items = publishersVm.Select(p => new SelectListItem
                 {
-                    Value = p.PublisherId.ToString(),
+                    Value = p.Id.ToString(),
                     Text = p.PublisherName
                 });
 
@@ -70,7 +71,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                BookCo formCo = _mapper.Map<BookCo>(form);
+                Book formCo = _mapper.Map<Book>(form);
                 _unitOfWork.Books.Add(formCo);
                 _unitOfWork.Complate();
                 TempData["Message"] = "Sikeres hozzáadás!";
@@ -92,7 +93,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                BookCo bookCo = _mapper.Map<BookCo>(form);
+                Book bookCo = _mapper.Map<Book>(form);
                 _unitOfWork.Books.Update(bookCo);
                 _unitOfWork.Complate();
 
@@ -100,13 +101,14 @@ namespace Szakdolgozat.Web.Controllers
                 return RedirectToAction(nameof(Index));
             }
             TempData["Message"] = "Mentés sikertelen!";
-            return RedirectToAction(nameof(Create), form.BookId);
+            return RedirectToAction(nameof(Create), form.Id);
         }
         #endregion
 
         #region Details
         public IActionResult Details(int id)
         {
+            ViewBag.Source = "Book";
             var bookCo = _unitOfWork.Books.GetById(id);
 
             if (bookCo == null)

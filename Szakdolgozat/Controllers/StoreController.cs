@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Szakdolgozat.BL.UnitOfWork;
@@ -7,6 +8,7 @@ using Szakdolgozat.DTO.ViewModels;
 
 namespace Szakdolgozat.Web.Controllers
 {
+    [Authorize]
     public class StoreController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -47,7 +49,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                StoreCo formCo = _mapper.Map<StoreCo>(form);
+                Store formCo = _mapper.Map<Store>(form);
                 _unitOfWork.Stores.Add(formCo);
                 _unitOfWork.Complate();
                 TempData["Message"] = "Sikeres hozzáadás!";
@@ -69,7 +71,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                StoreCo storeCo = _mapper.Map<StoreCo>(form);
+                Store storeCo = _mapper.Map<Store>(form);
                 _unitOfWork.Stores.Update(storeCo);
                 _unitOfWork.Complate();
 

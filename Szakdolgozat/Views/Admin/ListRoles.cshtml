@@ -1,0 +1,45 @@
+﻿@model IEnumerable<IdentityRole>
+
+@{
+    ViewBag.Title = "Szerepkörök";
+}
+
+<div class="row justify-content-center">
+    <div class="col-7">
+
+        <h1>Szerepkörök</h1>
+
+        @if (Model.Any())
+        {
+            <a class="btn btn-primary mb-3" style="width: auto" asp-action="CreateRole">Szerepkör létrehozása</a>
+
+            foreach (var role in Model)
+            {
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Id: @role.Id
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@role.Name</h5>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary" asp-action="EditRole" asp-route-id="@role.Id">Szerkesztés</a>
+                        <a href="#" class="btn btn-danger">Törlés</a>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="card">
+                <div class="card-header">
+                    Nincs megjelenítendő szerepkör.
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">A gombra kattintva tudsz új szerepkört létrehozni</h5>
+                    <a class="btn btn-primary" style="width: auto" asp-action="CreateRole">Szerepkör létrehozása</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

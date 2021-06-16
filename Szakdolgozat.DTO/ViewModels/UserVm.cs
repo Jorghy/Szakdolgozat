@@ -16,6 +16,7 @@ namespace Szakdolgozat.DTO.ViewModels
         public string EmailAddress { get; set; }
 
         [Display(Name = "Jelszó")]
+        [DataType(DataType.Password)]
         [Required(ErrorMessage = "A(z) {0} mezőt kötelező kitölteni!")]
         [MaxLength(100, ErrorMessage = "A(z) {0} mező {1}-nél hosszabb nem lehet!")]
         public string Password { get; set; }
@@ -34,13 +35,13 @@ namespace Szakdolgozat.DTO.ViewModels
 
         [Display(Name = "Kiadó")]
         [Required(ErrorMessage = "A(z) {0} mezőt kötelező kitölteni!")]
-        public int PublisherId { get; set; }
+        public int PubId { get; set; }
 
         [Display(Name = "Munkaviszony kezdete")]
         public DateTime? HireDate { get; set; }
 
         public virtual PublisherVm Publisher { get; set; }
         public virtual RoleVm Role { get; set; }
-        public virtual ICollection<RefreshToken> RefreshTokens { get; set; }
+        //public virtual ICollection<RefreshToken> RefreshTokens { get; set; }
     }
 }

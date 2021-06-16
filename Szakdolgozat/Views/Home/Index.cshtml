@@ -1,8 +1,45 @@
-﻿@{
+﻿@model IEnumerable<BookVm>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="card col-4">
+                <div class="card-header">
+                    <h5 class="card-title">@item.Title</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-6">@Html.DisplayNameFor(model => item.Price)</dt>
+                        <dd class="col-6">@Html.DisplayFor(model => item.Price)</dd>
+
+                        <dt class="col-6">@Html.DisplayNameFor(model => item.YtdSales)</dt>
+                        <dd class="col-6 align-content-center" style="display: table-cell; vertical-align: middle">@Html.DisplayFor(model => item.YtdSales)</dd>
+
+                        <dt class="col-6">@Html.DisplayNameFor(model => item.Publisher.PublisherName)</dt>
+                        <dd class="col-6">@Html.DisplayFor(model => item.Publisher.PublisherName)</dd>
+
+                        <dt class="col-6">@Html.DisplayNameFor(model => item.PublishedDate)</dt>
+                        <dd class="col-6">@Html.DisplayFor(model => item.PublishedDate)</dd>
+
+                        <dt class="col-4">Szerzők:</dt>
+                        <dd class="col-8">
+                            <ul>
+                                @foreach (var author in item.BookAuthors)
+                                {
+                                <li>@author.Author.LastName  @author.Author.FirstName</li>
+                                }
+                            </ul>
+                        </dd>
+
+                        <dt class="col-12">@Html.DisplayNameFor(model => item.Notes)</dt>
+                        <dd class="col-12">@Html.DisplayFor(model => item.Notes)</dd>
+                    </dl>
+                </div>
+            </div>
+        }
+    </div>
 </div>

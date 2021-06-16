@@ -44,11 +44,6 @@
                             <span asp-validation-for="City" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="State" class="control-label"></label>
-                            <input asp-for="State" class="form-control" />
-                            <span asp-validation-for="State" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
                             <label asp-for="Zip" class="control-label"></label>
                             <input asp-for="Zip" class="form-control" />
                             <span asp-validation-for="Zip" class="text-danger"></span>
@@ -75,7 +70,7 @@
                 <div class="col-md-4">
                     <form asp-action="Edit">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <input type="hidden" asp-for="AuthorId" />
+                        <input type="hidden" asp-for="Id" />
                         <div class="form-group">
                             <label asp-for="LastName" class="control-label"></label>
                             <input asp-for="LastName" class="form-control" />
@@ -105,11 +100,6 @@
                             <label asp-for="City" class="control-label"></label>
                             <input asp-for="City" class="form-control" />
                             <span asp-validation-for="City" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="State" class="control-label"></label>
-                            <input asp-for="State" class="form-control" />
-                            <span asp-validation-for="State" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Zip" class="control-label"></label>

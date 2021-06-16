@@ -1,13 +1,15 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Data.Entity.Infrastructure;
 using Szakdolgozat.BL.UnitOfWork;
 using Szakdolgozat.DTO.Models;
 using Szakdolgozat.DTO.ViewModels;
 
 namespace Szakdolgozat.Web.Controllers
 {
+    [Authorize]
     public class AuthorController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -48,7 +50,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                AuthorCo formCo = _mapper.Map<AuthorCo>(form);
+                Author formCo = _mapper.Map<Author>(form);
                 _unitOfWork.Authors.Add(formCo);
                 _unitOfWork.Complate();
                 TempData["Message"] = "Sikeres hozzáadás!";
@@ -70,7 +72,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                AuthorCo authorCo = _mapper.Map<AuthorCo>(form);
+                Author authorCo = _mapper.Map<Author>(form);
                 try
                 {
                     _unitOfWork.Authors.Update(authorCo);
@@ -78,7 +80,7 @@ namespace Szakdolgozat.Web.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (_unitOfWork.Authors.GetById(authorCo.AuthorId) == null)
+                    if (_unitOfWork.Authors.GetById(authorCo.Id) == null)
                         return NotFound();
                 }
                 TempData["Message"] = "A változtatásokat sikeresen elmentettük!";

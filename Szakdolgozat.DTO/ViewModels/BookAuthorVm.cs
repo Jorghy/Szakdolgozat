@@ -4,7 +4,7 @@ namespace Szakdolgozat.DTO.ViewModels
 {
     public class BookAuthorVm
     {
-        public int BookAuthorId { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Író azonosító")]
         public int AuthorId { get; set; }
@@ -12,7 +12,7 @@ namespace Szakdolgozat.DTO.ViewModels
         [Display(Name = "Könyv azonosító")]
         public int BookId { get; set; }
 
-        [Display(Name = "Író példánya")]
+        [Display(Name = "Író példányszám")]
         public byte? AuthorOrder { get; set; }
 
         [Display(Name = "Jogdíj")]

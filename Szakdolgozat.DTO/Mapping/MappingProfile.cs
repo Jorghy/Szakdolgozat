@@ -8,15 +8,13 @@ namespace Szakdolgozat.DTO.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<AuthorCo, AuthorVm>().ReverseMap();
-            CreateMap<BookAuthorCo, BookAuthorVm>().ReverseMap();
-            CreateMap<BookCo, BookVm>().ReverseMap();
-            CreateMap<JobCo, JobVm>().ReverseMap();
-            CreateMap<PublisherCo, PublisherVm>().ReverseMap();
-            CreateMap<RoleCo, RoleVm>().ReverseMap();
-            CreateMap<SaleCo, SaleVm>().ReverseMap();
-            CreateMap<StoreCo, StoreVm>().ReverseMap();
-            CreateMap<UserCo, UserVm>().ReverseMap();
+            CreateMap<Author, AuthorVm>().ReverseMap();
+            CreateMap<BookAuthor, BookAuthorVm>().ReverseMap();
+            CreateMap<Book, BookVm>().ReverseMap();
+            CreateMap<Job, JobVm>().ReverseMap();
+            CreateMap<Publisher, PublisherVm>().ReverseMap();
+            CreateMap<Sale, SaleVm>().ReverseMap();
+            CreateMap<Store, StoreVm>().ReverseMap();
         }
     }
 }

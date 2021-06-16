@@ -1,0 +1,26 @@
+﻿@model Szakdolgozat.DTO.ViewModels.CreateRoleVm
+
+@{
+    ViewData["Title"] = "Szerepkör";
+}
+
+<div class="row justify-content-center">
+    <div class="col-7">
+        <h1>Szerepkör hozzáadása</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post" asp-action="CreateRole">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="RoleName" class="control-label"></label>
+                        <input asp-for="RoleName" class="form-control" />
+                        <span asp-validation-for="RoleName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Mentés" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

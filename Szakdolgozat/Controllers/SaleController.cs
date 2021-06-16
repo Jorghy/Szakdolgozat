@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using Szakdolgozat.DTO.ViewModels;
 
 namespace Szakdolgozat.Web.Controllers
 {
+    [Authorize]
     public class SaleController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -38,14 +40,14 @@ namespace Szakdolgozat.Web.Controllers
             storeItems = storeVm.Select(p => new SelectListItem
             {
                 Text = p.StoreName,
-                Value = p.StoreId.ToString()
+                Value = p.Id.ToString()
             });
             var books = _unitOfWork.Books.GetAll();
             var bookVm = _mapper.Map<IEnumerable<BookVm>>(books);
             bookItems = bookVm.Select(p => new SelectListItem
             {
                 Text = p.Title,
-                Value = p.BookId.ToString()
+                Value = p.Id.ToString()
             });
 
             ViewBag.Store = storeItems;
@@ -69,7 +71,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                SaleCo formCo = _mapper.Map<SaleCo>(form);
+                Sale formCo = _mapper.Map<Sale>(form);
                 _unitOfWork.Sales.Add(formCo);
                 _unitOfWork.Complate();
                 TempData["Message"] = "Sikeres hozzáadás!";
@@ -91,7 +93,7 @@ namespace Szakdolgozat.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                SaleCo saleCo = _mapper.Map<SaleCo>(form);
+                Sale saleCo = _mapper.Map<Sale>(form);
                 _unitOfWork.Sales.Update(saleCo);
                 _unitOfWork.Complate();
 

@@ -6,7 +6,7 @@ namespace Szakdolgozat.DTO.ViewModels
     public class RoleVm
     {
         [Display(Name = "ID")]
-        public short RoleId { get; set; }
+        public short Id { get; set; }
 
         [Display(Name = "Szerepkör")]
         [Required(ErrorMessage = "A(z) {0} mezőt kötelező kitölteni!")]

@@ -26,8 +26,22 @@ using Szakdolgozat.DTO.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\Project\Szakdolgozat\Szakdolgozat\Views\_ViewImports.cshtml"
+using Szakdolgozat.DTO.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "D:\Project\Szakdolgozat\Szakdolgozat\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0f6ef0c6a9ca0e27395234d763113f7ef1560bdf", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9c6886786c869dda2af7a0af72aed3f59e141bb7", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"77e5519a5c53ebc5089b126600da17a40c602b16", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Szakdolgozat.DTO.ViewModels.ErrorViewModel>
     {
         #pragma warning disable 1998

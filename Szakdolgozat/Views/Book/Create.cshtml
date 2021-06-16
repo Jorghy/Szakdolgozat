@@ -33,11 +33,6 @@
                             <span asp-validation-for="Price" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="Royality" class="control-label"></label>
-                            <input asp-for="Royality" class="form-control" />
-                            <span asp-validation-for="Royality" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
                             <label asp-for="YtdSales" class="control-label"></label>
                             <input asp-for="YtdSales" class="form-control" />
                             <span asp-validation-for="YtdSales" class="text-danger"></span>
@@ -74,7 +69,7 @@
                 <div class="col-md-4">
                     <form asp-action="Edit">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <input type="hidden" asp-for="BookId" />
+                        <input type="hidden" asp-for="Id" />
                         <div class="form-group">
                             <label asp-for="Title" class="control-label"></label>
                             <input asp-for="Title" class="form-control" />
@@ -93,11 +88,6 @@
                             <label asp-for="Price" class="control-label"></label>
                             <input asp-for="Price" class="form-control" />
                             <span asp-validation-for="Price" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Royality" class="control-label"></label>
-                            <input asp-for="Royality" class="form-control" />
-                            <span asp-validation-for="Royality" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="YtdSales" class="control-label"></label>

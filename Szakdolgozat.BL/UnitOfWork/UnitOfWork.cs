@@ -11,13 +11,12 @@ namespace Szakdolgozat.BL.UnitOfWork
         public IBookRepository Books { get; }
         public IJobRepository Jobs { get; }
         public IPublisherRepository Publishers { get; }
-        public IRoleRepository Roles { get; }
         public ISaleRepository Sales { get; }
         public IStoreRepository Stores { get; }
-        public IUserRepository Users { get; }
 
-        public UnitOfWork(BookStoreContext context, IAuthorRepository Author, IBookAuthorRepository BookAuthor, IBookRepository Book,
-            IJobRepository Job, IPublisherRepository Publisher, IRoleRepository Role, ISaleRepository Sale, IStoreRepository Store, IUserRepository User)
+        public UnitOfWork(BookStoreContext context, IAuthorRepository Author, IBookAuthorRepository BookAuthor, 
+            IBookRepository Book, IJobRepository Job, IPublisherRepository Publisher, ISaleRepository Sale, 
+            IStoreRepository Store)
         {
             _context = context;
             Authors = Author;
@@ -25,10 +24,8 @@ namespace Szakdolgozat.BL.UnitOfWork
             Books = Book;
             Jobs = Job;
             Publishers = Publisher;
-            Roles = Role;
             Sales = Sale;
             Stores = Store;
-            Users = User;
         }
 
         public int Complate()

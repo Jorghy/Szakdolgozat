@@ -6,7 +6,7 @@ namespace Szakdolgozat.DTO.ViewModels
     public class PublisherVm
     {
         [Display(Name = "ID")]
-        public int PublisherId { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Kiadó neve")]
         [MaxLength(40, ErrorMessage = "A(z) {0} mező {1}-nél hosszabb nem lehet!")]
